@@ -1,6 +1,7 @@
 import { TodoService } from './../../services/todo.service';
 import { Todo } from './../../models/Todo';
 import { Component, OnInit } from '@angular/core';
+import { Subscriber } from 'rxjs';
 
 @Component({
   selector: 'app-todos',
@@ -26,6 +27,12 @@ export class TodosComponent implements OnInit {
 
     // delite on server
     this.todoService.deliteTodo(todo).subscribe();
+  }
+
+  // add todo
+  addTodo(todo: Todo) {
+// tslint:disable-next-line: no-shadowed-variable
+    this.todoService.addTodo(todo).subscribe(todo => this.todos.push(todo));
   }
 
 }

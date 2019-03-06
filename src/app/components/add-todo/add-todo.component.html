@@ -1,0 +1,7 @@
+<form class="form" (ngSubmit)= "onSubmit()">
+  <input type="text" name="title" [(ngModel)]="title" placeholder="Add todo...">
+  <input type="submit" value="submit" class="btn">
+
+  <!-- <input type="text" name="title" [(ngModel)]="title" placeholder="Add todo..." #input>
+  <input type="submit" (clearInput)="input.value = ''" value="submit" class="btn"> -->
+</form>
