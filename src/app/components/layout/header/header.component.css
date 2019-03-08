@@ -9,3 +9,9 @@
   color: #fff;
   text-decoration: none;
 }
+
+.active {
+  display: block;
+  transition: ease-in-out;
+  background-color:indianred;
+}
